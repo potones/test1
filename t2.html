@@ -1,0 +1,77 @@
+﻿<html>
+<head>
+<meta charset="UTF-8">
+<title>자주 가는 사이트</title>
+<style type="text/css">
+</style>
+<script>
+window.onload=function(){
+	window.setInterval("f()",300);
+}
+
+var array=["red","gold","blue"];
+var index=0;
+
+function f(){
+	 if(index==3) index=0; //index가 3이 되면 0으로 초기화 합니다.
+	spanTag.style.color=array[index++];
+}
+function f1(){
+	target.innerHTML=
+	"<a href='http://www.naver.com'>네이버</a><br/>" +
+	"<input type='button' value='네이버테스트' onclick='f2()'><br/>"+
+	"<a href='#' onclick='f3()'>이상한사이트</a><br/>"+
+	"<a href='#' onclick='f4()'>사이트숨기기</a><br/>";
+}
+function f2(){
+	location.href="http://www.naver.com";	
+}
+function f3(){
+ newwin=window.open("http://www.naver.com","","width=500 height=500");
+}
+function f4(){
+ newwin.close(); //window.close();라고 적으면 원래의 창이 닫힙니다.
+}
+</script>
+</head>
+<body bgColor="orange">
+<span id="spanTag"><b>사이트 모음전</b></span><br/><br/>
+
+<a target="_blank" href="http://www.naver.com" title="클릭하면 네이버로 연결됩니다"><b>네이버</b></a><br/>
+<a href="https://www.youtube.com/"><b>유튜브</b></a><br/>
+<a href="https://okky.kr/articles/columns" title=" IT인들을 위한 커뮤니티, 구인구직 사이트"><b>OKKY</b></a><br/>
+<a href="http://cafe.naver.com/seoulitacademy"><b>학원카페</b></a><br/>
+<a href="http://localhost:8282/jinacMain/loginform.html"><b>프로젝트</b></a><br/>
+<a href="http://localhost:8282/zzzAccount/loginform.html"><b>용철형님프로젝트</b></a><br/>
+<a href="http://localhost:8282/Y2kAccount/loginform.html"><b>내프로젝트</b></a><br/>
+<a href="http://localhost:8282/Y3kAccount/loginform.html"><b>2차 프로젝트</b></a><br/>
+<a href="http://localhost:7001/Y4kAccount/loginform.html"><b>3차 프로젝트</b></a><br/>
+<a href="http://localhost:7001/jininsaMpf/loginform.html"><b>내것이 될 프로젝트</b></a><br/>
+<a href="http://welfare.kcomwel.or.kr/index.jsp"><b>청년생계비대출</b></a><br/>
+<a href="https://www.youtube.com/channel/UCqRTjWqD-ZWHj0ZoPSKVWBw/playlists"><b>라이프소프트</b></a><br/>
+<a href="#more">더 많은 자료</a>
+<a href="t3.html">여흥이 많은 자료</a><br/>
+<input type="button" value="좀 더" onclick="f1()"><br/>
+
+<img src="https://cdn.pixabay.com/photo/2018/02/26/18/57/horse-3183756_1280.jpg" width="700" height="500" alt="말사진" title="horse"><br/>
+
+<select onchange="document.bgColor=this.value"> <!--onchage는 바뀌어야 이벤트가 활성화됩니다.-->
+ <option>바탕화면 색상바꾸기~</option>
+ <option>red</option>
+ <option>green</option>
+ <option>blue</option>
+ <option>orange</option>
+</select>
+
+<a id="target"></a>
+<script>
+for(a=0; a<500; a++){
+document.write("<br/>");
+}
+</script>
+<a href="http://www.naver.com"><b>네이버</b></a><br/>
+<a href="https://www.youtube.com/"><b>유튜브</b></a><br/>
+<a href="https://okky.kr/"><b>OKKY</b></a><br/>
+<a name="more">끝</a>
+</body>
+</html>
